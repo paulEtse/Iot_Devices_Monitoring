@@ -18,7 +18,7 @@
             $this->type=$type;
             $this->description=$description;
         }
-        function __toString(){
+        function toString(){
             return $this->name + $this->type;
         }
         function set_name($name){
@@ -56,7 +56,7 @@
     $connexion = new mysqli($host,$sdbuser,$dbpass,$dbname)
     or die("Connexion refused");
     $m = new Module("phone","mobile","Un téléphone");
-    echo $m;
+    echo $m->toString();
 ?>
 </p>
 </body>
