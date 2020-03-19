@@ -13,14 +13,16 @@ require_once 'Connect.php';
             $this->duree=$duree;
 		}
 		static function getHistorique($numero){
-			$connexion=Connect::connect();
+			$connexion = mysqli($host,$sdbuser,$dbpass,$dbname)
+            or die("Connexion refused");
 			$sql="SELECT * FROM module";
 			$res=$connexion->query($sql);
 			return res;
 		}
 		static function putHistorique($historique){
-			$connexion=Connect::connect();
-			$sql = "INSERT INTO module VALUES (null,".$m->get_name().",".$m->get_Type().",".$m->get_description().")";
+            $connexion = mysqli($host,$sdbuser,$dbpass,$dbname)
+            or die("Connexion refused");			
+            $sql = "INSERT INTO module VALUES (null,".$m->get_name().",".$m->get_Type().",".$m->get_description().")";
 			$connexion->exec($sql);
 		}
         function toString(){
