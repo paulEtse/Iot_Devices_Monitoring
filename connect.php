@@ -5,14 +5,17 @@
 <h1>My first PHP page</h1>
 
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-include('dbsetting.php');
-$setting = new dbsetting().getSeting();
-$connexion = new mysqli($setting['dbhost'],$setting['dbusernamen'],$setting['dbpassword'])
-or die("unable to connect to "+$setting['dbhost']);
-echo("paul");
+$host = 'localhost';
+// Database name
+$dbname = 'iot';
+// Username
+$sdbuser = 'paul';
+// Password
+$dbpass = 'mysqlserver';
+
+return $settings;
+$connexion = new mysqli($host,$sdbuser,$dbpass,$dbpass);
+echo "paul" ;
 ?>
 </body>
 </html>
