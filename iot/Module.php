@@ -1,5 +1,8 @@
 <?php
+
 namespace Iot;
+require_once 'Connect.php';
+
     class Module
     {
         private $numero;
@@ -11,9 +14,20 @@ namespace Iot;
             $this->name=$name;
             $this->type=$type;
             $this->description=$description;
-        }
+		}
+		static function getModules(){
+			$connexion=Connect::connect();
+			$sql="SELECT * FROM module";
+			$res=$connexion->query($sql);
+			return res;
+		}
+		static function putModule($m){
+			$connexion=Connect::connect();
+			$sql = "INSERT INTO module VALUES (null,".$m->get_name().",".$m->get_Type().",".$m->get_description().")";
+			$connexion->exec($sql);
+		}
         function toString(){
-            return $this->name.$this->type;
+            return Nom." ".$this->name."\n".$this->description;
         }
         function set_name($name){
             $this->name = $name;
@@ -34,6 +48,6 @@ namespace Iot;
         }
         function get_description(){
             return $this->description;
-        }
+		}
     }
 ?>
