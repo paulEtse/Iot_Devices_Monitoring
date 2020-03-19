@@ -19,7 +19,7 @@
             $this->description=$description;
         }
         function toString(){
-            return $this->name + $this->type;
+            return $this->name.$this->type;
         }
         function set_name($name){
             $this->name = $name;
@@ -45,7 +45,6 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
-    include_once 'Module.php';
     $host = 'localhost';
     // Database name
     $dbname = 'iot';
