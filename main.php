@@ -20,7 +20,18 @@
     global $connexion;
     $sql="SELECT * FROM module";
     $res=$connexion->query($sql);
-    return $res;
+    $result="";
+    while($row = $res->fetch_assoc()) {
+      $result+=  "<tr>
+            <th scope='row'>1</th>
+            <td>".$row['numero']."</td>
+            <td>".$row['nom']."</td>
+            <td>".$row['type']."</td>
+            <td>".$row['state']."</td>
+            <td>See more ... </tr>
+          <tr>";
+    } 
+  return $result;  
   }
   function putModule($m){
     global $connexion;
@@ -30,7 +41,7 @@
   function getHistorique($numero){
     global $connexion;
     $res=$connexion->query($sql);
-    return $res;
+    return $res;   
   }
   function putHistorique($historique){
     global $connexion;
