@@ -1,5 +1,4 @@
 <?php
-namespace Iot;
 require_once 'Connect.php';
 
     class Historique
@@ -11,19 +10,6 @@ require_once 'Connect.php';
             $this->numero=$numero;
             $this->etat=$etat;
             $this->duree=$duree;
-		}
-		static function getHistorique($numero){
-			$connexion = mysqli($host,$sdbuser,$dbpass,$dbname)
-            or die("Connexion refused");
-			$sql="SELECT * FROM module";
-			$res=$connexion->query($sql);
-			return res;
-		}
-		static function putHistorique($historique){
-            $connexion = mysqli($host,$sdbuser,$dbpass,$dbname)
-            or die("Connexion refused");			
-            $sql = "INSERT INTO module VALUES (null,".$m->get_name().",".$m->get_Type().",".$m->get_description().")";
-			$connexion->exec($sql);
 		}
         function toString(){
             return Numero." ".$this->etat."\n".$this->duree;

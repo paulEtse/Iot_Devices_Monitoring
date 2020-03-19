@@ -12,10 +12,33 @@
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
-require_once 'Module.php';
-require_once 'Historique.php';
-$res =Iot\Module::getModules();
-while($row = $res->fetch_assoc()) {
+  require_once 'Module.php';
+  require_once 'Historique.php';
+  $connexion = mysqli($host,$sdbuser,$dbpass,$dbname)
+  or die("Connexion refused");
+  function getModules(){
+    global $connexion;
+    $sql="SELECT * FROM module";
+    $res=$connexion->query($sql);
+    return res;
+  }
+  function putModule($m){
+    global $connexion;
+    $sql = "INSERT INTO module VALUES (null,".$m->get_name().",".$m->get_Type().",".$m->get_description().")";
+    $connexion->exec($sql);
+  }
+  function getHistorique($numero){
+    global $connexion;
+    $res=$connexion->query($sql);
+    return res;
+  }
+  function putHistorique($historique){
+    global $connexion;
+    $sql = "INSERT INTO module VALUES (null,".$m->get_name().",".$m->get_Type().",".$m->get_description().")";
+    $connexion->exec($sql);
+  }
+  $res =Iot\Module::getModules();
+  while($row = $res->fetch_assoc()) {
     echo "numero: " . $row["numero"]. " - Nom: " . $row["nom"]. " " . $row["type"]. "<br>";
 }
 ?>
