@@ -20,7 +20,7 @@
     global $connexion;
     $sql="SELECT * FROM module";
     $res=$connexion->query($sql);
-    return res;
+    return $res;
   }
   function putModule($m){
     global $connexion;
@@ -30,14 +30,14 @@
   function getHistorique($numero){
     global $connexion;
     $res=$connexion->query($sql);
-    return res;
+    return $res;
   }
   function putHistorique($historique){
     global $connexion;
     $sql = "INSERT INTO module VALUES (null,".$m->get_name().",".$m->get_Type().",".$m->get_description().")";
     $connexion->exec($sql);
   }
-  $res =getModules();
+  $res = getModules();
   while($row = $res->fetch_assoc()) {
     echo "numero: " . $row["numero"]. " - Nom: " . $row["nom"]. " " . $row["type"]. "<br>";
 }
