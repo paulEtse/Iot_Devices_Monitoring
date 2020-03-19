@@ -14,7 +14,7 @@
   error_reporting(E_ALL);
   require_once 'Module.php';
   require_once 'Historique.php';
-  $connexion =new mysqli_connect($host,$sdbuser,$dbpass,$dbname)
+  $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
   or die("Connexion refused");
   function getModules(){
     global $connexion;
