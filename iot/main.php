@@ -14,7 +14,7 @@
   error_reporting(E_ALL);
 require_once 'Module.php';
 require_once 'Historique.php';
-$res =Module::getModules();
+$res =Iot\Module::getModules();
 while($row = $res->fetch_assoc()) {
     echo "numero: " . $row["numero"]. " - Nom: " . $row["nom"]. " " . $row["type"]. "<br>";
 }
