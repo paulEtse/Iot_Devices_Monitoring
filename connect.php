@@ -4,10 +4,7 @@
 
 <h1>My first PHP page</h1>
 <p>
-    <?php
-    use iot/Module as Module;
-    
-    namespace iot;
+    <?php 
 
     $host = 'localhost';
     // Database name
