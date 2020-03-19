@@ -17,8 +17,8 @@
     $sdbuser = 'paul';
     // Password
     $dbpass = 'mysqlserver';
-    $connexion = new mysqli($host,$sdbuser,$dbpass,$dbname)
-    or die("Connexion refused");
+    //$connexion = new mysqli($host,$sdbuser,$dbpass,$dbname)
+   // or die("Connexion refused");
     $m = new \Iot\Module("phone","mobile","Un téléphone");
     echo $m->toString();
 ?>
