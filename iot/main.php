@@ -37,7 +37,7 @@
     $sql = "INSERT INTO module VALUES (null,".$m->get_name().",".$m->get_Type().",".$m->get_description().")";
     $connexion->exec($sql);
   }
-  $res =Iot\Module::getModules();
+  $res =Module::getModules();
   while($row = $res->fetch_assoc()) {
     echo "numero: " . $row["numero"]. " - Nom: " . $row["nom"]. " " . $row["type"]. "<br>";
 }
