@@ -9,8 +9,8 @@
   </head>
   <body>
 <?php
-require_once 'iot/Module.php';
-require_once 'iot/Historique.php';
+require_once 'Iot/Module.php';
+require_once 'Iot/Historique.php';
 $res =Module::getModules();
 while($row = $res->fetch_assoc()) {
     echo "numero: " . $row["numero"]. " - Nom: " . $row["nom"]. " " . $row["type"]. "<br>";
