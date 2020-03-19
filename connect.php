@@ -13,7 +13,8 @@
     // Password
     $dbpass = 'mysqlserver';
     echo "paul" ;
-    $connexion = new mysqli($host,$sdbuser,$dbpass,$dbpass);
+    $connexion = new mysqli($host,$sdbuser,$dbpass,$dbpass)
+    or die("Connexion refused");
     echo "paul" ;
     ?>
 </p>
