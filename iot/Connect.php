@@ -10,7 +10,7 @@
         static private $dbpass = 'mysqlserver';
         function __construct(){}
         static function connect(){
-            $connexion = new mysqli($host,$sdbuser,$dbpass,$dbname)
+            $connexion = mysqli($host,$sdbuser,$dbpass,$dbname)
             or die("Connexion refused");
         }
     }
