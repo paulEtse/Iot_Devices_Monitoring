@@ -26,6 +26,7 @@
             <th scope='row'>".$row['numero']."</th>
             <td>".$row['nom']."</td>
             <td>".$row['type']."</td>
+            <td>".$row['state']."</td>
             <td>".$row['description']."</td>
             <td>See more ... </td>
           <tr>";
