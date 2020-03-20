@@ -21,10 +21,6 @@
             <small id="typeHelp" class="invisible form-text text-muted">le type ne peut pas être vide.</small>
         </div>
         <div class="form-group">
-            <label for="inputState">State </label>
-            <input type="text" class="form-control" id="inputState" placeholder="Entre le L'état">
-            <small id="stateHelp" class="invisible form-text text-muted">le type ne peut pas être vide.</small>        </div>
-        <div class="form-group">
             <label for="areaComment">Description </label>
             <textarea class="form-control" rows="5" id="areaComment"></textarea>
         </div>
@@ -51,10 +47,10 @@
                 <option value="4">&gt; 10</option>
               </select>
             </div>
-        </div>
+        </div>-->
         <div class="form-group">
             <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="stoppedState" name="state" value="stop">
+                <input type="radio" class="custom-control-input" id="stoppedState" name="state" value="stopped">
                 <label class="custom-control-label" for="stoppedState">Stopped</label>
               </div>
               <div class="custom-control custom-radio">
@@ -62,7 +58,7 @@
                 <label class="custom-control-label" for="workingState">Working</label>
               </div>
             </div>
-        </div> -->
+        </div> 
         <button type="submit" class="btn btn-primary" onclick="verification()">Submit</button>
       </form>
   </body>

@@ -14,7 +14,6 @@
     <p>
       <button type="button" onclick="location.href = 'add.php';"  class="btn btn-success submit-button" on>+ Add </button>
     </p>
-<p>
     <div class="table-responsive text-nowrap">
         <!--Table-->
         <table class="table table-striped">
