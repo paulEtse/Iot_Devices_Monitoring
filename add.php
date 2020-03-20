@@ -59,7 +59,7 @@
               </div>
             </div>
         </div> 
-        <button type="submit" class="btn btn-primary" onclick="verification()">Submit</button>
+        <button type="button" class="btn btn-primary" onclick="verification()">Submit</button>
       </form>
   </body>
   <script
