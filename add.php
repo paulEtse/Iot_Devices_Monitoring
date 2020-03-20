@@ -11,22 +11,25 @@
     <form id="myForm" method="post">
         <div class="form-group">
           <label for="inputName">Nom </label>
-          <input type="text" class="form-control" id="inputName" placeholder="Entre le Nom">
+          <input type="text" required class="form-control" id="inputName" placeholder="Entre le Nom">
           <small id="nonHelp" class="form-text text-muted">Le nom du module ne peut pas être vide.</small>
         </div>
 
         <div class="form-group">
             <label for="inputType">Type </label>
-            <input type="text" class="form-control" id="inputType" placeholder="Entre le Type">
-            <small id="typeHelp" class="form-text text-muted">le type ne peut pas être vide.</small>
+            <input type="text" required class="form-control" id="inputType" placeholder="Entre le Type">
+            <small id="typeHelp" class="invisible form-text text-muted">le type ne peut pas être vide.</small>
         </div>
-
+        <div class="form-group">
+            <label for="inputState">State </label>
+            <input type="text" class="form-control" id="inputState" placeholder="Entre le L'état">
+            <small id="stateHelp" class="invisible form-text text-muted">le type ne peut pas être vide.</small>        </div>
         <div class="form-group">
             <label for="areaComment">Description </label>
             <textarea class="form-control" rows="5" id="areaComment"></textarea>
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <div>
               <select id= "selectionTemperature" class="mdb-select colorful-select dropdown-primary md-form" multiple>
                 <option value="0" disabled selected>Niveau de température en °F </option>
@@ -59,7 +62,7 @@
                 <label class="custom-control-label" for="workingState">Working</label>
               </div>
             </div>
-        </div>
+        </div> -->
         <button type="submit" class="btn btn-primary" onclick="verification()">Submit</button>
       </form>
   </body>
