@@ -23,12 +23,11 @@
     $result="";
     while($row = $res->fetch_assoc()) {
       $result+=  "<tr>
-            <th scope='row'>1</th>
-            <td>".$row['numero']."</td>
+            <th scope='row'>".$row['numero']."</th>
             <td>".$row['nom']."</td>
             <td>".$row['type']."</td>
-            <td>".$row['state']."</td>
-            <td>See more ... </tr>
+            <td>".$row['description']."</td>
+            <td>See more ... </td>
           <tr>";
     } 
   return $result;  

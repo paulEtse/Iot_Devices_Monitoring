@@ -23,7 +23,6 @@
               <th>Type</th>
               <th>Description</th>
               <th>Etat</th>
-              <th>Details</th>
             </tr>
           </thead>
           <!--Table head-->
@@ -40,14 +39,12 @@
               <td>Moss</td>
               <td>USA / The United Kingdom / China / Russia </td>
               <td>New York City / Warsaw / Lodz / Amsterdam / London / Chicago</td>
-              <td>Web Designer /UX designer / Ul designer / JavaScript Developer</td>            </tr>
             <tr>
               <th scope="row">2</th>
               <td>Anna</td>
               <td>Wintour</td>
               <td>USA / The United Kingdom / China / Russia </td>
               <td>New York City / Warsaw / Lodz / Amsterdam / London / Chicago</td>
-              <td>Web Designer /UX designer / Ul designer / JavaScript Developer</td>            </tr>
           </tbody>
           <!--Table body-->
 
