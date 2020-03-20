@@ -22,7 +22,7 @@
     $res=$connexion->query($sql);
     $result="";
     while($row = $res->fetch_assoc()) {
-      $result .=  "<tr>
+      $result .=  "<tr class='row'>
             <th scope='row'>".$row['numero']."</th>
             <td>".$row['nom']."</td>
             <td>".$row['type']."</td>

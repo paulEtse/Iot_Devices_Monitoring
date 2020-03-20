@@ -21,7 +21,7 @@
 
           <!--Table head-->
           <thead>
-            <tr>
+            <tr class="row">
               <th>#</th>
               <th>Nom</th>
               <th>Type</th>
