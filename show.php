@@ -27,7 +27,7 @@
               <th>Type</th>
               <th>Etat</th>
               <th>Description</th>
-              <th class=".d-none .d-sm-block">Details</th>
+              <th class="hidden-xs">Details</th>
             </tr>
           </thead>
           <!--Table head-->

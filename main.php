@@ -27,7 +27,7 @@
             <td>".$row['nom']."</td>
             <td>".$row['type']."</td>
             <td>".$row['state']."</td>
-            <td class='.d-none .d-sm-block'>".$row['description']."</td>
+            <td class='hidden-xs'>".$row['description']."</td>
             <td>See more ... </td>
           <tr>";
     } 
