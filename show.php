@@ -17,16 +17,16 @@
 <p>
     <div class="table-responsive text-nowrap">
         <!--Table-->
-        <table class="table table-striped">
+        <table class="table table-striped row">
 
           <!--Table head-->
           <thead>
-            <tr class="row">
+            <tr>
               <th>#</th>
               <th>Nom</th>
               <th>Type</th>
               <th>Etat</th>
-              <th class="col-sm-0">Description</th>
+              <th class="hidden-xs hidden-sm">Description</th>
               <th >Details</th>
             </tr>
           </thead>

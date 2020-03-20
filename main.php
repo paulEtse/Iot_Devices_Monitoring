@@ -22,12 +22,12 @@
     $res=$connexion->query($sql);
     $result="";
     while($row = $res->fetch_assoc()) {
-      $result .=  "<tr class='row'>
+      $result .=  "<tr>
             <th scope='row'>".$row['numero']."</th>
             <td>".$row['nom']."</td>
             <td>".$row['type']."</td>
             <td>".$row['state']."</td>
-            <td class='col-sm-0'>".$row['description']."</td>
+            <td class='hidden-xs hidden-sm'>".$row['description']."</td>
             <td>See more ... </td>
           <tr>";
     } 
