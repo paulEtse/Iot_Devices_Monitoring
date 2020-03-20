@@ -17,7 +17,7 @@
 <p>
     <div class="table-responsive text-nowrap">
         <!--Table-->
-        <table class="table table-striped row">
+        <table class="table table-striped">
 
           <!--Table head-->
           <thead>
