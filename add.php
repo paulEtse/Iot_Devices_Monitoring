@@ -8,7 +8,7 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <form id="myForm" method="post">
+    <form method="post">
         <div class="form-group">
           <label for="inputName">Nom </label>
           <input type="text" required class="form-control" id="inputName" placeholder="Entre le Nom">
