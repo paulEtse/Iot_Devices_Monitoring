@@ -27,7 +27,7 @@
             <td>".$row['nom']."</td>
             <td>".$row['type']."</td>
             <td>".$row['state']."</td>
-            <td class='col-xs-0'>".$row['description']."</td>
+            <td class='col-sm-0'>".$row['description']."</td>
             <td>See more ... </td>
           <tr>";
     } 

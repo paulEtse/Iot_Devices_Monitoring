@@ -26,7 +26,7 @@
               <th>Nom</th>
               <th>Type</th>
               <th>Etat</th>
-              <th class="col-xs-0">Description</th>
+              <th class="col-sm-0">Description</th>
               <th >Details</th>
             </tr>
           </thead>
