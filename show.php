@@ -26,8 +26,8 @@
               <th>Nom</th>
               <th>Type</th>
               <th>Etat</th>
-              <th>Description</th>
-              <th class="hidden-xs">Details</th>
+              <th class="col-xs-0">Description</th>
+              <th >Details</th>
             </tr>
           </thead>
           <!--Table head-->
@@ -46,4 +46,8 @@
         <!--Table-->
       </div>
       <!--Section: Live preview-->
+      <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
   </body>
