@@ -1,11 +1,11 @@
 function verification()
 {
-    var name=$("#inputName").value;
+    var name=document.getElementById('inputName').value;
     alert(name);
-    var type=$("#inputType").value;
+    var type=document.getElementById('inputType').value;
     alert(type);
-    var comment=$("#areaComment").value;
-    alert(value);
+    var comment=document.getElementById("areaComment").value;
+    alert(comment);
     //var temperature= $("#selectionTemperature").val();
     //var time=$("#selectionTime");
     var state= $("input[name='state']:checked").val();
