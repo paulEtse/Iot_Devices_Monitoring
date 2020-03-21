@@ -30,7 +30,7 @@ function getModules(){
     $description=$m->get_description();
     $state=null;
     $statement->bind_param('ssss',$name,$type,$description,$state);
-    $statement.execute();
+    $statement->execute();
   }
   function getHistorique($numero){
     $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
