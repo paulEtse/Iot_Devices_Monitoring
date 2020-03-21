@@ -23,7 +23,7 @@ function getModules(){
     global $host,$dbname,$dbpass,$sdbuser;
     $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
     or die("Connexion refused");
-    $sql = "INSERT INTO module ('nom', 'type', 'description', 'state') VALUES (?,?,?,?)";
+    $sql = "INSERT INTO module (nom, type,description,state) VALUES (?,?,?,?)";
     $statement = $connexion->prepare($sql);
     $name=$m->get_name();
     $type=$m->get_type();
