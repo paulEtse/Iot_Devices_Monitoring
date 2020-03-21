@@ -23,12 +23,10 @@ function getModules(){
     global $host,$dbname,$dbpass,$sdbuser;
     $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
     or die("Connexion refused");
-    $sql = "INSERT INTO module (nom, type, description, state) VALUES (:name,:type,:description,:state)";
+    $sql = "INSERT INTO module (nom, type, description, state) VALUES (?,?,?,?)";
     $statement = $connexion->prepare($sql);
-    $statement.bindParam(':name',$m.get_name());
-    $statement.bindParam(':type',$m.get_type());
-    $statement.bindParam(':description',$m.get_description());
-    $statement.exec();
+    $statement.bindParam('sss',$m.get_name(),$m.get_type(),$m.get_description());
+    $statement.execute();
   }
   function getHistorique($numero){
     $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
