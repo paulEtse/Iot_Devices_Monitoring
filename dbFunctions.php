@@ -19,7 +19,7 @@ function getModules(){
     } 
   return $result;  
   }
-  function putModule($m){
+  function putModule(Module $m){
     global $host,$dbname,$dbpass,$sdbuser;
     $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
     or die("Connexion refused");
