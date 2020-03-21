@@ -20,7 +20,7 @@ function getModules(){
   return $result;  
   }
   function putModule($m){
-    global $host,$dbname,$dbpass,$dbname;
+    global $host,$dbname,$dbpass,$sdbuser;
     $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
     or die("Connexion refused");
     $sql = "INSERT INTO module (nom, type, description, state) VALUES (:name,:type,:description,:state)";
