@@ -1,4 +1,4 @@
-function verification()
+function submission()
 {
     var ok=true;
     var name=document.getElementById('inputName').value;
@@ -15,8 +15,7 @@ function verification()
     data={
         name:name,
         type:type,
-        description:comment,
-        state:state
+        description:comment
     };
     if(ok){
         $.post(Url,data,function(data, status){
