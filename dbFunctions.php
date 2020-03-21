@@ -23,14 +23,8 @@ function getModules(){
     global $host,$dbname,$dbpass,$sdbuser;
     $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
     or die("Connexion refused");
-    $sql = "INSERT INTO module (nom, type,description,state) VALUES (?,?,?,?)";
-    $statement = $connexion->prepare($sql);
-    $name=$m->get_name();
-    $type=$m->get_type();
-    $description=$m->get_description();
-    $state=null;
-    $statement->bind_param('ssss',$name,$type,$description,$state);
-    $statement->execute() or die("Can't execute SQL statement: $DBI::errstr\n");
+    $sql = "INSERT INTO module VALUES (null,".$m->get_name().",".$m->get_Type().",".$m->get_description().")";
+    $connexion->exec($sql);
   }
   function getHistorique($numero){
     $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
