@@ -1,5 +1,5 @@
 <?php
-include 'Connect.php';
+require_once 'Connect.php';
 require_once 'Module.php';
 function getModules(){
     $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
