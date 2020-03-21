@@ -34,7 +34,7 @@
           <!--Table body-->
           <tbody>
             <?php 
-              require_once 'main.php';
+              require_once 'dbFunctions.php';
               echo getModules(); 
             ?>
           </tbody>

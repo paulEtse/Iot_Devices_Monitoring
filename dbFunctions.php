@@ -1,0 +1,44 @@
+<?php
+include 'Connect.php';
+require_once 'Module.php';
+function getModules(){
+    $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
+    or die("Connexion refused");
+    $sql="SELECT * FROM module";
+    $res=$connexion->query($sql);
+    $result="";
+    while($row = $res->fetch_assoc()) {
+      $result .=  "<tr>
+            <th scope='row'>".$row['numero']."</th>
+            <td>".$row['nom']."</td>
+            <td>".$row['type']."</td>
+            <td>".$row['state']."</td>
+            <td class='hidden-xs hidden-sm'>".$row['description']."</td>
+            <td>See more ... </td>
+          <tr>";
+    } 
+  return $result;  
+  }
+  function putModule($m){
+    $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
+    or die("Connexion refused");
+    $sql = "INSERT INTO module (nom, type, description, state) VALUES (:name,:type,:description,:state)";
+    $statement = $connexion->prepare($sql);
+    $statement.bindParam(':name',$m.get_name());
+    $statement.bindParam(':type',$m.get_type());
+    $statement.bindParam(':description',$m.get_description());
+    $statement.exec();
+  }
+  function getHistorique($numero){
+    $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
+    or die("Connexion refused");
+    $res=$connexion->query($sql);
+    return $res;   
+  }
+  function putHistorique($historique){
+    $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
+    or die("Connexion refused");
+    $sql = "INSERT INTO module VALUES (null,".$m->get_name().",".$m->get_Type().",".$m->get_description().")";
+    $connexion->exec($sql);
+  }
+?>
