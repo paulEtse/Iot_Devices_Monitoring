@@ -25,7 +25,7 @@ function getModules(){
     or die("Connexion refused");
     $sql = "INSERT INTO module (nom, type, description, state) VALUES (?,?,?,?)";
     $statement = $connexion->prepare($sql);
-    $statement->bind_param('ssss',$m->get_name(),$m->get_type(),$m->get_description(),null);
+    $statement->bind_param('ssss',$v=$m->get_name(),$v2=$m->get_type(),$v3=$m->get_description(),$v4=null);
     $statement.execute();
   }
   function getHistorique($numero){
