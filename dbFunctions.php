@@ -2,7 +2,8 @@
 require_once 'Connect.php';
 require_once 'Module.php';
 function getModules(){
-    $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
+  global $host,$dbname,$dbpass,$sdbuser;
+  $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
     or die("Connexion refused");
     $sql="SELECT * FROM module";
     $res=$connexion->query($sql);
