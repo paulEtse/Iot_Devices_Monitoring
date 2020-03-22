@@ -7,7 +7,7 @@ function submission()
     //var temperature= $("#selectionTemperature").val();
     //var time=$("#selectionTime");
     var state= $("input[name='state']:checked").val();
-    const URL= "post.php";
+    const URL= "main.php";
     data={
         name:name,
         type:type,
