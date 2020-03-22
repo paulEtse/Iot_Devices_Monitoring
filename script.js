@@ -18,7 +18,7 @@ function submission()
         description:comment
     };
     if(ok){
-        $.post(Url,data,function(data, status){
+        $.post(Url,data,function(data,status,jr){
             console.log('${data} and status is ${status}');
         });
     }
