@@ -5,16 +5,16 @@ function getModules(){
   global $host,$dbname,$dbpass,$sdbuser;
   $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
     or die("Connexion refused");
-    $sql="SELECT * FROM module";
+    $sql="SELECT * FROM projet";
     $res=$connexion->query($sql);
     $result="";
     while($row = $res->fetch_assoc()) {
       $result .=  "<tr>
-            <th scope='row'>".$row['numero']."</th>
-            <td>".$row['nom']."</td>
-            <td>".$row['type']."</td>
-            <td>".$row['state']."</td>
-            <td class='hidden-xs hidden-sm'>".$row['description']."</td>
+            <th scope='row'>".$row['id_projet']."</th>
+            <td>".$row['nom_projet']."</td>
+            <td>".$row['date_debut_projet']."</td>
+            <td>".$row['date_fin_projet']."</td>
+            <td class='hidden-xs hidden-sm'>".$row['date_fin_projet']."</td>
             <td>See more ... </td>
           <tr>";
     } 
