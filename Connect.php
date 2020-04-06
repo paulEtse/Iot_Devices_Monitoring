@@ -1,7 +1,7 @@
 <?php
     $host = 'localhost';
     // Database name
-    $dbname = 'iot';
+    $dbname = 'pfe';
     // Username
     $sdbuser = 'paul';
     // Password
