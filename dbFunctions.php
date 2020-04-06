@@ -5,7 +5,7 @@ function getModules(){
   global $host,$dbname,$dbpass,$sdbuser;
   $connexion = mysqli_connect($host,$sdbuser,$dbpass,$dbname)
     or die("Connexion refused");
-    $sql="SELECT * FROM projet";
+    $sql="SELECT id_projet, nom_projet,date_debut_projet, date_fin_projet FROM projet";
     $res=$connexion->query($sql);
     $result="";
     while($row = $res->fetch_assoc()) {
